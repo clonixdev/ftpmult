@@ -11,6 +11,7 @@ COPY package.json ./
 RUN npm install
 
 # Copia el resto del código
+COPY ftpmult.js ./
 COPY index.js ./
 
 # Crea ruta para la clave host SSH

@@ -9,7 +9,8 @@ function FtpServer(options) {
         return new FtpServer(options);
     }
 
-    this.myHost = options.host || '127.0.0.1';
+    console.log("HOST CONFIGURED ",options.host);
+    this.myHost = options.host || '0.0.0.0';
     this.server = net.createServer();
     this.getHostFromUsername = options.getHostFromUsername || function(username) { return null; };
     this.logLevel = options.logLevel || 0;
